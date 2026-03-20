@@ -69,6 +69,10 @@ local textboxButtons = {
     ["FLY SPEED"] = {
     variable = "FLY_SPEED",
     url = nil
+    },
+    ["RANGE"] = {
+    variable = "RANGE",
+    url = nil
 }
 }
 local screenGui = Instance.new("ScreenGui", PlayerGui)
@@ -343,6 +347,7 @@ local menuData = {
 },
     ["COMBAT"] = {
         "KILL AURA",
+        "RANGE",
     },
     ["Fps"] = {
         "Fps Boost"
@@ -446,6 +451,9 @@ for i,menu in ipairs(menuOrder) do
         elseif opt == "X-RAY" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text147/refs/heads/main/Text147.lua"))()
 
+        elseif opt == "KILL AURA" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text372/refs/heads/main/Text372.lua"))()
+                            
         elseif opt == "Gaze Emote" then
             loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Gaze-emote-74592"))()
 
