@@ -37,7 +37,7 @@ local noToggleButtons = {
     ["DESYNC"] = true,
     ["Fps Boost"] = true,
     ["FULL BRIGHT"] = true,
-    ["FREEZE ALL PLAYERS (CLIENT)"] = true,
+    ["INFINITY STAMINA"] = true,
     ["COMPLETE OBBY"] = true,
     ["AUTO COLLECT CASH (FARM)"] = true,
     ["AUTO TP A TASK (BUTTON)"] = true,
@@ -335,6 +335,8 @@ local menuData = {
     ["MAIN"] = {
     "LOCALPLAYER",
     "DESYNC",
+    "INVISIBLE",
+    "INFINITY STAMINA",
     "SPEED",
     "JUMPPOWER",
     "GRAVITY",
@@ -343,11 +345,14 @@ local menuData = {
     "INFINITI JUMP",
     "FLY SPEED",
     "FLY",
-    "TP TOOL",
 },
     ["COMBAT"] = {
         "KILL AURA",
         "RANGE",
+    },
+    ["TELEPORT"] = {
+        "TP TOOL",
+        "",
     },
     ["Fps"] = {
         "Fps Boost"
@@ -453,6 +458,9 @@ for i,menu in ipairs(menuOrder) do
 
         elseif opt == "KILL AURA" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text372/refs/heads/main/Text372.lua"))()
+
+        elseif opt == "INFINITY STAMINA" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text373/refs/heads/main/Text373.lua"))()
                             
         elseif opt == "Gaze Emote" then
             loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Gaze-emote-74592"))()
