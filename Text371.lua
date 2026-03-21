@@ -133,7 +133,6 @@ end
 local stroke = Instance.new("UIStroke", mainFrame)
 stroke.Color = Color3.fromRGB(255,255,255)
 stroke.Thickness = 2
-strokeFrame.ZIndex = 1  -- siempre atrás
 
 
 do
@@ -169,7 +168,6 @@ local title = Instance.new("TextLabel", mainFrame)
 title.Size = UDim2.new(1,0,0,50)
 title.BackgroundColor3 = Color3.fromRGB(0,0,0)
 title.Text = "SBS HUB | TSB"
-title.ZIndex = 2  -- encima del borde
 title.TextColor3 = Color3.fromRGB(255,255,255)
 title.Font = Enum.Font.GothamBold
 title.TextScaled = true
