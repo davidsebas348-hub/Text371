@@ -360,12 +360,14 @@ local menuData = {
         "ESP TO ALL GUNS",
         "ESP TO ALL THE CUBES",
         "ESP TO OTHER OBJECTS",
+        "ESP NAME",
+        "ESP DISTANCE",
         
     },
     ["ANIMATIONS"] = {
         "ELIGIR PACK",
         "ELIGIR PACK V2",
-        "ELIGIR PACK (CODIGO",
+        "ELIGIR PACK (CODIGO)",
         "GAZE EMOTE",
     },
     ["TELEPORT"] = {
@@ -438,6 +440,45 @@ for i,menu in ipairs(menuOrder) do
         if opt == "RESET STATS" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Reset-speed-jumpPower-y-gravedad-/refs/heads/main/Reset.lua"))()
 
+        elseif opt == "ESP TO ALL THE CUBES" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text374/refs/heads/main/Text374.lua"))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
         elseif opt == "SHIFT LOCK" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Shift-lock/refs/heads/main/Shift_Lock_.lua"))()
 
