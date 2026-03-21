@@ -319,7 +319,6 @@ local scrollConfig = {
     ["COMBAT"] = true,
     ["ESP"] = true,
     ["TELEPORT"] = true,
-    ["COUNTER Y BLOCK"] = true,
     ["ANTI"] = true,
     ["DODGE"] = true,
     ["AUTO FARM"] = true,
@@ -372,7 +371,6 @@ local menuData = {
     },
     ["TELEPORT"] = {
         "TP TOOL",
-        "",
     },
     ["Fps"] = {
         "Fps Boost"
