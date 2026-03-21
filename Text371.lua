@@ -11,12 +11,12 @@ local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
 -- TITULOS ARRIBA DE BOTONES
 local buttonTitles = {
     ["SPEED"] = "PLAYER",
-    ["AUTO COUNTER M1"] = "COUNTER",
+    ["INFINITY ZOOM"] = "CAMERA",
 
-    ["ESP DEATH COUNTER"] = "ESP GAME",
-    ["ESP DUMMY"] = "ESP TO NPC",
-    ["ESP BOX TO PLAYERS"] = "EXTRA ESP",
-
+    ["ELIGIR PACK"] = "ANIMATION PACK",
+    ["GAZE EMOTE"] = "EMOTES",
+    
+    ["ESP TO ALL THE TOKEN"] = "ESP ITEMS",
     ["AIM LOCK"] = "AIMBOT",
     ["AUTO WALL COMBO"] = "AUTO COMBOS",
 
@@ -337,6 +337,7 @@ local menuData = {
     "DESYNC",
     "INVISIBLE",
     "INFINITY STAMINA",
+    "INFINITY ZOOM",
     "SPEED",
     "JUMPPOWER",
     "GRAVITY",
@@ -349,6 +350,23 @@ local menuData = {
     ["COMBAT"] = {
         "KILL AURA",
         "RANGE",
+    },
+    ["ESP"] = {
+        "ESP TO ALL THE TOKEN",
+        “ESP FOR ALL FOODS",
+        "ESP FOR EVERY BANDAGE AND MEDKIT",
+        "ESP A ALL AMMOS",
+        "ESP TO ALL KATANA",
+        "ESP TO ALL GUNS",
+        "ESP TO ALL THE CUBES",
+        "ESP TO OTHER OBJECTS",
+        
+    },
+    ["ANIMATIONS"] = {
+        "ELIGIR PACK",
+        "ELIGIR PACK V2",
+        "ELIGIR PACK (CODIGO",
+        "GAZE EMOTE",
     },
     ["TELEPORT"] = {
         "TP TOOL",
