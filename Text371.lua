@@ -3,6 +3,10 @@
 -- ======================
 repeat task.wait() until game:IsLoaded()
 
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = game:GetService("CoreGui")
+screenGui.DisplayOrder = 999999
+screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global
 local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
 local LocalPlayer = Players.LocalPlayer
@@ -75,7 +79,6 @@ local textboxButtons = {
     url = nil
 }
 }
-local screenGui = Instance.new("ScreenGui", PlayerGui)
 local old = PlayerGui:FindFirstChild("SBS_HUB")
 if old then
     old:Destroy()
@@ -174,7 +177,8 @@ title.TextScaled = true
 local line = Instance.new("Frame", mainFrame)
 line.Size = UDim2.new(1,0,0,2)
 line.Position = UDim2.new(0,0,0,50)
-line.BackgroundColor3 = Color3.fromRGB(255,255,255)
+line.BackgroundColor3 = Color3.new(1,1,1)
+line.BackgroundTransparency = 0
 
 local rightFrame = Instance.new("ScrollingFrame", mainFrame)
 rightFrame.Size = UDim2.new(1,-150,1,-52)
