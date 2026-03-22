@@ -27,16 +27,22 @@ local BUTTON_GLOBAL_Y = 0
 -- ======================
 
 local BUTTON_CUSTOM = {
+    ["RANGE"] = {
+        size = UDim2.new(1, -19, 0, 25),
+        x = 20,
+        y = -6
+    },
+
     ["SIZE"] = {
         size = UDim2.new(1, -19, 0, 25),
         x = 20,
-        y = -10
+        y = -6
     },
 
-    ["HITBOX_TRANSPARENCY"] = {
+    ["TRASPARENCY 0-1"] = {
         size = UDim2.new(1, -19, 0, 25),
         x = 20,
-        y = -10
+        y = -5
     }
 }
 
@@ -52,7 +58,8 @@ local buttonTitles = {
     ["AIM LOCK"] = "AIMBOT",
     ["AUTO WALL COMBO"] = "AUTO COMBOS",
 
-    ["AUTO OBBY"] = "OBBY",
+    ["HITBOX EXTENDER"] = "HITBOX",
+    ["AUTO KILL ENEMIES"] = "KILL",
 
     ["Fps Boost"] = "PERFORMANCE"
 }
@@ -404,6 +411,7 @@ local menuData = {
     "FLY",
 },
     ["COMBAT"] = {
+        "AUTO KILL ENEMIES",
         "KILL AURA",
         "RANGE",        
         "HITBOX EXTENDER",
