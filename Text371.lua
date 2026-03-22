@@ -12,6 +12,34 @@ local UserInputService = game:GetService("UserInputService")
 local LocalPlayer = Players.LocalPlayer
 local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
 
+-- ======================
+-- CONFIG GLOBAL BOTONES (FALTABA ESTO)
+-- ======================
+
+local BUTTON_SIZE = UDim2.new(1, -20, 0, 30)
+
+local BUTTON_OFFSET_X = 10
+local BUTTON_GLOBAL_X = 0
+local BUTTON_GLOBAL_Y = 0
+
+-- ======================
+-- CONFIG PERSONAL POR BOTÓN
+-- ======================
+
+local BUTTON_CUSTOM = {
+    ["INFINITY ZOO"] = {
+        size = UDim2.new(1, -25, 0, 30),
+        x = 20,
+        y = 10
+    },
+
+    ["FL"] = {
+        size = UDim2.new(1, -40, 0, 35),
+        x = 30,
+        y = 10
+    }
+}
+
 -- TITULOS ARRIBA DE BOTONES
 local buttonTitles = {
     ["SPEED"] = "PLAYER",
@@ -46,7 +74,6 @@ local noToggleButtons = {
     ["AUTO COLLECT CASH (FARM)"] = true,
     ["AUTO TP A TASK (BUTTON)"] = true,
     ["REMOVE INVISIBLE WALLS"] = true,
-    ["HITBOX EXTENDER"] = true,
 }
 
 -- BOTONES SIN EFECTO VERDE
@@ -224,8 +251,25 @@ local function createButton(parent,text,y,callback)
     local hasTextbox = textboxButtons[text] ~= nil
 
     local container = Instance.new("Frame", parent)
-    container.Size = UDim2.new(1,-20,0,30)
-    container.Position = UDim2.new(0,10,0,y)
+    local custom = BUTTON_CUSTOM[text]
+
+local finalSize = BUTTON_SIZE
+local extraX = 0
+local extraY = 0
+
+if custom then
+    if custom.size then
+        finalSize = custom.size
+    end
+    extraX = custom.x or 0
+    extraY = custom.y or 0
+end
+
+container.Size = finalSize
+container.Position = UDim2.new(
+    0, BUTTON_OFFSET_X + BUTTON_GLOBAL_X + extraX,
+    0, y + BUTTON_GLOBAL_Y + extraY
+)
     container.BackgroundTransparency = 1
 
     local button = Instance.new("TextButton", container)
@@ -353,7 +397,10 @@ local menuData = {
 },
     ["COMBAT"] = {
         "KILL AURA",
-        "RANGE",
+        "RANGE",        
+        "HITBOX EXTENDER",
+        "SIZE",
+        "HITBOX TRASPARENCY 0-1",
     },
     ["ESP"] = {
         "ESP TO ALL THE TOKEN",
@@ -449,9 +496,99 @@ for i,menu in ipairs(menuOrder) do
         elseif opt == "ESP NAME" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text375/refs/heads/main/Text375.lua"))()
 
+        elseif opt == "ESP DISTANCE" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text376/refs/heads/main/Text376.lua"))()
+                            
+        elseif opt == "ESP FOR ALL FOODS" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text377/refs/heads/main/Text377.lua"))()
+                            
+        elseif opt == "ESP FOR EVERY BANDAGE AND MEDKIT" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text378/refs/heads/main/Text378.lua"))()
+
+        elseif opt == "ESP TO ALL KATANA" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text379/refs/heads/main/Text379.lua"))()
+                            
+        elseif opt == "ESP TO ALL THE TOKEN" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text380/refs/heads/main/Text380.lua"))()
+                            
+        elseif opt == "ESP A ALL AMMOS" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text381/refs/heads/main/Text381.lua"))()
+
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
                             
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
                             
