@@ -301,7 +301,7 @@ if hasTextbox then
     button:Destroy()
 
     local box = Instance.new("TextBox", container)
-    box.Size = UDim2.new(1,0,1,0)
+    box.Size = finalSize -- o UDim2.new(1,-10,0,30) para ajustar
     box.Position = UDim2.new(0,0,0,0)
     box.BackgroundColor3 = Color3.fromRGB(25,25,25)
     box.TextColor3 = Color3.fromRGB(255,255,255)
