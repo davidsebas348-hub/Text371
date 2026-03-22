@@ -28,15 +28,15 @@ local BUTTON_GLOBAL_Y = 0
 
 local BUTTON_CUSTOM = {
     ["SIZE"] = {
-        size = UDim2.new(1, -25, 0, 30),
+        size = UDim2.new(1, -19, 0, 25),
         x = 20,
-        y = 10
+        y = -10
     },
 
     ["HITBOX_TRANSPARENCY"] = {
-        size = UDim2.new(1, 15, 0, 30),
+        size = UDim2.new(1, -19, 0, 25),
         x = 20,
-        y = 10
+        y = -10
     }
 }
 
