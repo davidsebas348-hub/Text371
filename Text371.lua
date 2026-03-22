@@ -27,15 +27,15 @@ local BUTTON_GLOBAL_Y = 0
 -- ======================
 
 local BUTTON_CUSTOM = {
-    ["INFINITY ZOO"] = {
+    ["SIZE"] = {
         size = UDim2.new(1, -25, 0, 30),
         x = 20,
         y = 10
     },
 
-    ["FL"] = {
-        size = UDim2.new(1, -40, 0, 35),
-        x = 30,
+    ["HITBOX_TRANSPARENCY"] = {
+        size = UDim2.new(1, 15, 0, 30),
+        x = 20,
         y = 10
     }
 }
@@ -99,7 +99,15 @@ local textboxButtons = {
 
     ["FLY SPEED"] = {
     variable = "FLY_SPEED",
-    url = nil
+    url = nil[
+    },
+    ["SIZE"] = {
+    variable = "HITBOX_SIZE",
+    url = nil[
+    },
+    ["TRASPARENCY 0-1"] = {
+    variable = "HITBOX_TRANSPARENCY",
+    url = nil[
     },
     ["RANGE"] = {
     variable = "RANGE",
@@ -400,7 +408,7 @@ local menuData = {
         "RANGE",        
         "HITBOX EXTENDER",
         "SIZE",
-        "HITBOX TRASPARENCY 0-1",
+        "TRASPARENCY 0-1",
     },
     ["ESP"] = {
         "ESP TO ALL THE TOKEN",
@@ -514,8 +522,8 @@ for i,menu in ipairs(menuOrder) do
         elseif opt == "ESP A ALL AMMOS" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text381/refs/heads/main/Text381.lua"))()
 
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "HITBOX EXTENDER" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text382/refs/heads/main/Text382.lua"))()
                             
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
