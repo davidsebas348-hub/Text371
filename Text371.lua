@@ -553,7 +553,7 @@ for i,menu in ipairs(menuOrder) do
         elseif opt == "UNLOCK THIRD PERSON" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text385/refs/heads/main/Text385.lua"))()
                             
-        elseif opt == "ESP GUNS" then
+        elseif opt == "ESP TO ALL GUNS" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text386/refs/heads/main/Text386.lua"))()
 
         elseif opt == "ESP TO OTHER ITEMS" then
