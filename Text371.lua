@@ -54,9 +54,9 @@ local buttonTitles = {
     ["ELIGIR PACK"] = "ANIMATION PACK",
     ["GAZE EMOTE"] = "EMOTES",
     
-    ["ESP TO ALL THE TOKEN"] = "ESP ITEMS",
-    ["AIM LOCK"] = "AIMBOT",
-    ["AUTO WALL COMBO"] = "AUTO COMBOS",
+    ["ESP TO ALL THE TOKEN"] = "ITEMS",
+    ["ESP ENEMIES"] = "ENEMIES",
+    ["ESP PLAYERS"] = "PLAYERS",
 
     ["HITBOX EXTENDER"] = "HITBOX",
     ["AUTO KILL ENEMIES"] = "KILL",
@@ -401,6 +401,7 @@ local menuData = {
     "INVISIBLE",
     "INFINITY STAMINA",
     "INFINITY ZOOM",
+    "UNLOCK THIRD PERSON",
     "SPEED",
     "JUMPPOWER",
     "GRAVITY",
@@ -426,9 +427,17 @@ local menuData = {
         "ESP TO ALL KATANA",
         "ESP TO ALL GUNS",
         "ESP TO ALL THE CUBES",
-        "ESP TO OTHER OBJECTS",
+        "ESP TO OTHER ITEMS",
         "ESP NAME",
         "ESP DISTANCE",
+        "ESP ENEMIES",
+        "ESP ENEMIES (NO LAG)",
+        "ESP NAME TO ENEMIES",
+        "ESP DISTANCE TO ENEMIES",
+        "ESP PLAYERS",
+        "ESP PLAYERS (NO LAG)",
+        "ESP NAME TO PLAYERS",
+        "ESP DISTANCE TO PLAYERS",
         
     },
     ["ANIMATIONS"] = {
@@ -533,20 +542,20 @@ for i,menu in ipairs(menuOrder) do
         elseif opt == "HITBOX EXTENDER" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text382/refs/heads/main/Text382.lua"))()
                             
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "AUTO KILL ENEMIES" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text383/refs/heads/main/Text383.lua"))()
                             
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "INFINITY ZOOM" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text384/refs/heads/main/Text384.lua"))()
 
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "UNLOCK THIRD PERSON" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text385/refs/heads/main/Text385.lua"))()
                             
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "ESP GUNS" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text386/refs/heads/main/Text386.lua"))()
 
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "ESP TO OTHER ITEMS" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text387/refs/heads/main/Text387.lua"))()
                             
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
