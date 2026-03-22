@@ -42,7 +42,7 @@ local BUTTON_CUSTOM = {
     ["TRASPARENCY 0-1"] = {
         size = UDim2.new(1, -30, 0, 27),
         x = 20,
-        y = -5
+        y = -9 
     }
 }
 
