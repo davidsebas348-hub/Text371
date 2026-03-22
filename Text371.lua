@@ -99,15 +99,15 @@ local textboxButtons = {
 
     ["FLY SPEED"] = {
     variable = "FLY_SPEED",
-    url = nil[
+    url = nil
     },
     ["SIZE"] = {
     variable = "HITBOX_SIZE",
-    url = nil[
+    url = nil
     },
     ["TRASPARENCY 0-1"] = {
     variable = "HITBOX_TRANSPARENCY",
-    url = nil[
+    url = nil
     },
     ["RANGE"] = {
     variable = "RANGE",
