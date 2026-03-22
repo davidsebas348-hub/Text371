@@ -28,19 +28,19 @@ local BUTTON_GLOBAL_Y = 0
 
 local BUTTON_CUSTOM = {
     ["RANGE"] = {
-        size = UDim2.new(1, -13, 0, 25),
+        size = UDim2.new(1, -30, 0, 27),
         x = 20,
         y = -6
     },
 
     ["SIZE"] = {
-        size = UDim2.new(1, -13, 0, 25),
+        size = UDim2.new(1, -30, 0, 27),
         x = 20,
         y = -6
     },
 
     ["TRASPARENCY 0-1"] = {
-        size = UDim2.new(1, -13, 0, 25),
+        size = UDim2.new(1, -30, 0, 27),
         x = 20,
         y = -5
     }
