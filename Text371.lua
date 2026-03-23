@@ -571,8 +571,8 @@ for i,menu in ipairs(menuOrder) do
         elseif opt == "ESP ENEMIES (NO LAG)" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text391/refs/heads/main/Text391.lua"))()
 
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "ESP TO ALL ALARMS" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text392/refs/heads/main/Text392.lua"))()
                             
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
