@@ -13,6 +13,23 @@ local LocalPlayer = Players.LocalPlayer
 local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
 
 -- ======================
+-- 🔥 MULTI BUTTON CONFIG
+-- ======================
+
+local multiButtons = {
+    ["COLOR SELECT OF THE ESP"] = {
+        variable = "Target",
+        options = {
+            {name = "PLAYER", color = Color3.fromRGB(40,40,40)},
+            {name = "NPC", color = Color3.fromRGB(120,40,40)},
+            {name = "ALL", color = Color3.fromRGB(40,120,40)},
+        }
+    },
+
+    -- puedes meter 30+ aquí sin problema
+}
+
+-- ======================
 -- CONFIG GLOBAL BOTONES (FALTABA ESTO)
 -- ======================
 
@@ -265,6 +282,7 @@ end
 
 local function createButton(parent,text,y,callback)
     local hasTextbox = textboxButtons[text] ~= nil
+local multiConfig = multiButtons[text]
 
     local container = Instance.new("Frame", parent)
     local custom = BUTTON_CUSTOM[text]
@@ -293,7 +311,63 @@ container.Position = UDim2.new(
     button.Font = Enum.Font.GothamBold
     button.TextSize = 14
     button.BorderSizePixel = 0
-       
+
+-- ======================
+-- 🔥 MULTI MODE (FIX REAL PRO)
+-- ======================
+if multiConfig then
+    button.Size = UDim2.new(1,0,1,0)
+    button.Text = "" -- 🔥 quitar texto del botón
+    button.BackgroundColor3 = Color3.fromRGB(20,20,20) -- color fijo
+
+    getgenv().SBS_MULTI = getgenv().SBS_MULTI or {}
+local savedIndex = getgenv().SBS_MULTI[text]
+
+local index = savedIndex or 0
+    local options = multiConfig.options
+
+    -- 🔥 TEXTO SEPARADO
+    local label = Instance.new("TextLabel", button)
+    label.Size = UDim2.new(1,0,1,0)
+    label.BackgroundTransparency = 1
+    label.TextScaled = false
+label.TextSize = 14
+    label.Font = Enum.Font.GothamBold
+
+    local function update()
+    if index == 0 then
+        label.Text = text -- 🔥 NOMBRE DEL BOTÓN
+        label.TextColor3 = Color3.fromRGB(255,255,255)
+    else
+        local opt = options[index]
+        label.Text = opt.name
+        label.TextColor3 = opt.color
+
+        if multiConfig.variable then
+            getgenv()[multiConfig.variable] = opt.name
+        end
+    end
+end
+
+    update()
+
+    button.MouseButton1Click:Connect(function()
+    if index == 0 then
+        index = 1
+    else
+        index += 1
+        if index > #options then
+            index = 1
+        end
+    end
+
+    getgenv().SBS_MULTI[text] = index -- 🔥 GUARDA
+
+    update()
+end)
+
+    return
+    end
 
 -- ======================
 -- TEXTBOX MODE
@@ -436,10 +510,8 @@ local menuData = {
         "ESP ENEMIES (NO LAG)",
         "ESP NAME TO ENEMIES",
         "ESP HP TO ENEMIES",
-        "ESP PLAYERS",
-        "ESP PLAYERS (NO LAG)",
-        "ESP NAME TO PLAYERS",
-        "ESP DISTANCE TO PLAYERS",
+        "ESP PLAYERS + NAME + DISTANCE",
+        "COLOR SELECT OF THE ESP", 
         
     },
     ["ANIMATIONS"] = {
