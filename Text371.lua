@@ -134,6 +134,10 @@ local textboxButtons = {
     variable = "HITBOX_TRANSPARENCY",
     url = nil
     },
+    ["NAME OF THE ITEM"] = {
+    variable = "FIND_TOOL",
+    url = nil
+    },
     ["RANGE"] = {
     variable = "RANGE",
     url = nil
@@ -494,6 +498,14 @@ local menuData = {
         "SIZE",
         "TRASPARENCY 0-1",
     },
+    ["BRING/PICK UP"] = {
+        "NAME OF THE ITEM",
+        "BRING ITEM",
+        "RANGE",        
+        "HITBOX EXTENDER",
+        "SIZE",
+        "TRASPARENCY 0-1",
+    },
     ["ESP"] = {
         "ESP TO ALL ALARMS",
         "ESP TO ALL THE TOKEN",
@@ -646,8 +658,8 @@ for i,menu in ipairs(menuOrder) do
         elseif opt == "ESP TO ALL ALARMS" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text392/refs/heads/main/Text392.lua"))()
                             
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "BRING ITEM" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text393/refs/heads/main/Text393.lua"))()
                             
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
