@@ -1,5 +1,5 @@
 -- ======================
--- SBS HUB COMPLETO FINAL (TSB)
+-- SBS HUB COMPLETO FINAL (TS
 -- ======================
 repeat task.wait() until game:IsLoaded()
 
@@ -319,7 +319,7 @@ container.Position = UDim2.new(
     0, BUTTON_OFFSET_X + BUTTON_GLOBAL_X + extraX,
     0, y + BUTTON_GLOBAL_Y + extraY
 )
-    container.BackgroundTransparency = 1
+    container.BackgroundTransprency = 1 
 
     local button = Instance.new("TextButton", container)
     button.TextColor3 = Color3.fromRGB(255,255,255)
@@ -327,61 +327,45 @@ container.Position = UDim2.new(
     button.TextSize = 14
     button.BorderSizePixel = 0
 
--- ======================
--- 🔥 MULTI MODE (FIX REAL PRO)
--- ======================
 if multiConfig then
-    button.Size = UDim2.new(1,0,1,0)
-    button.Text = "" -- 🔥 quitar texto del botón
-    button.BackgroundColor3 = Color3.fromRGB(20,20,20) -- color fijo
+        button.Size = UDim2.new(1,0,1,0)
+        button.Text = ""
+        button.BackgroundColor3 = Color3.fromRGB(20,20,20)
 
-    getgenv().SBS_MULTI = getgenv().SBS_MULTI or {}
-local savedIndex = getgenv().SBS_MULTI[text]
+        getgenv().SBS_MULTI = getgenv().SBS_MULTI or {}
+        local index = getgenv().SBS_MULTI[text] or 0
+        local options = multiConfig.options
 
-local index = savedIndex or 0
-    local options = multiConfig.options
+        local label = Instance.new("TextLabel", button)
+        label.Size = UDim2.new(1,0,1,0)
+        label.BackgroundTransparency = 1
+        label.TextSize = 14
+        label.Font = Enum.Font.GothamBold
 
-    -- 🔥 TEXTO SEPARADO
-    local label = Instance.new("TextLabel", button)
-    label.Size = UDim2.new(1,0,1,0)
-    label.BackgroundTransparency = 1
-    label.TextScaled = false
-label.TextSize = 14
-    label.Font = Enum.Font.GothamBold
-
-    local function update()
-    if index == 0 then
-        label.Text = text -- 🔥 NOMBRE DEL BOTÓN
-        label.TextColor3 = Color3.fromRGB(255,255,255)
-    else
-        local opt = options[index]
-        label.Text = opt.name
-        label.TextColor3 = opt.color
-
-        if multiConfig.variable then
-            getgenv()[multiConfig.variable] = opt.name
+        local function update()
+            if index == 0 then
+                label.Text = text
+                label.TextColor3 = Color3.fromRGB(255,255,255)
+            else
+                local opt = options[index]
+                label.Text = opt.name
+                label.TextColor3 = opt.color
+                if multiConfig.variable then
+                    getgenv()[multiConfig.variable] = opt.name
+                end
+            end
         end
-    end
-end
 
-    update()
+        update()
 
-    button.MouseButton1Click:Connect(function()
-    if index == 0 then
-        index = 1
-    else
-        index += 1
-        if index > #options then
-            index = 1
-        end
-    end
+        button.MouseButton1Click:Connect(function()
+            index += 1
+            if index > #options then index = 1 end
+            getgenv().SBS_MULTI[text] = index
+            update()
+        end)
 
-    getgenv().SBS_MULTI[text] = index -- 🔥 GUARDA
-
-    update()
-end)
-
-    return
+        return
     end
 
 -- ======================
@@ -489,7 +473,7 @@ if hasTextbox then
         end)
     end
 end
-end
+    
 -- ======================
 -- SCROLL POR SUBMENU
 -- ======================
