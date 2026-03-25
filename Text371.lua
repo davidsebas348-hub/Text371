@@ -1,5 +1,5 @@
 -- ======================
--- SBS HUB COMPLETO FINAL (TS
+-- SBS HUB COMPLETO FINAL (T
 -- ======================
 repeat task.wait() until game:IsLoaded()
 
@@ -294,32 +294,31 @@ local function createMenuButton(parent,text,y,callback)
     b.MouseButton1Click:Connect(callback)
 end
 
-
-local function createButton(parent,text,y,callback) -- 🖕🖕👽👽
+local function createButton(parent,text,y,callback)
     local hasTextbox = textboxButtons[text] ~= nil
-local multiConfig = multiButtons[text]
+    local multiConfig = multiButtons[text]
 
     local container = Instance.new("Frame", parent)
     local custom = BUTTON_CUSTOM[text]
 
-local finalSize = BUTTON_SIZE
-local extraX = 0
-local extraY = 0
+    local finalSize = BUTTON_SIZE
+    local extraX = 0
+    local extraY = 0
 
-if custom then
-    if custom.size then
-        finalSize = custom.size
+    if custom then
+        if custom.size then
+            finalSize = custom.size
+        end
+        extraX = custom.x or 0
+        extraY = custom.y or 0
     end
-    extraX = custom.x or 0
-    extraY = custom.y or 0
-end
 
-container.Size = finalSize
-container.Position = UDim2.new(
-    0, BUTTON_OFFSET_X + BUTTON_GLOBAL_X + extraX,
-    0, y + BUTTON_GLOBAL_Y + extraY
-)
-    container.BackgroundTransprency = 1 
+    container.Size = finalSize
+    container.Position = UDim2.new(
+        0, BUTTON_OFFSET_X + BUTTON_GLOBAL_X + extraX,
+        0, y + BUTTON_GLOBAL_Y + extraY
+    )
+    container.BackgroundTransparency = 1
 
     local button = Instance.new("TextButton", container)
     button.TextColor3 = Color3.fromRGB(255,255,255)
@@ -327,7 +326,10 @@ container.Position = UDim2.new(
     button.TextSize = 14
     button.BorderSizePixel = 0
 
-if multiConfig then
+    -- ======================
+    -- 🔥 MULTI MODE
+    -- ======================
+    if multiConfig then
         button.Size = UDim2.new(1,0,1,0)
         button.Text = ""
         button.BackgroundColor3 = Color3.fromRGB(20,20,20)
