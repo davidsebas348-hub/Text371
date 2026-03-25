@@ -462,7 +462,7 @@ local scrollConfig = {
     ["COMBAT"] = true,
     ["ESP"] = true,
     ["TELEPORT"] = true,
-    ["ANTI"] = true,
+    ["BRING/PICK UP"] = true,
     ["DODGE"] = true,
     ["AUTO FARM"] = true,
     ["FLING"] = true,
@@ -472,7 +472,7 @@ local scrollConfig = {
 -- ======================
 -- MENUS
 -- ======================
-local menuOrder = {"MAIN","COMBAT","ESP","TELEPORT","COUNTER/BLOCK/ULT","ANTI","DODGE","AUTO FARM","FLING","Fps","YOUTUBE"}
+local menuOrder = {"MAIN","COMBAT","ESP","TELEPORT","BRING/PICK UP","ANTI","DODGE","AUTO FARM","FLING","Fps","YOUTUBE"}
 local menuData = {
     ["MAIN"] = {
     "LOCALPLAYER",
