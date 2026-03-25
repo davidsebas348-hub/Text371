@@ -1,5 +1,5 @@
 -- ======================
--- SBS HUB COMPLETO FINAL (T
+-- SBS HUB COMPLETO FINAL (Survive Overnight in a Mega Store)
 -- ======================
 repeat task.wait() until game:IsLoaded()
 
@@ -56,13 +56,13 @@ local BUTTON_GLOBAL_Y = 0
 
 local BUTTON_CUSTOM = {
     ["RANGE"] = {
-        size = UDim2.new(1, -30, 0, 27),
+        size = UDim2.new(1, -50, 0, 27),
         x = 20,
         y = -6
     },
 
     ["SIZE"] = {
-        size = UDim2.new(1, -30, 0, 27),
+        size = UDim2.new(1, -50, 0, 27),
         x = 20,
         y = -6
     },
@@ -90,6 +90,9 @@ local buttonTitles = {
     ["HITBOX EXTENDER"] = "HITBOX",
     ["AUTO KILL ENEMIES"] = "KILL",
 
+    ["NAME OF THE ITEM"] = "BRING",
+    [""] = "",
+    
     ["Fps Boost"] = "PERFORMANCE"
 }
 
@@ -106,7 +109,7 @@ local noToggleButtons = {
     ["Fps Boost"] = true,
     ["FULL BRIGHT"] = true,
     ["INFINITY STAMINA"] = true,
-    ["COMPLETE OBBY"] = true,
+    ["BRING ITEM"] = true,
     ["AUTO COLLECT CASH (FARM)"] = true,
     ["AUTO TP A TASK (BUTTON)"] = true,
     ["REMOVE INVISIBLE WALLS"] = true,
@@ -245,7 +248,7 @@ end
 local title = Instance.new("TextLabel", mainFrame)
 title.Size = UDim2.new(1,0,0,50)
 title.BackgroundColor3 = Color3.fromRGB(0,0,0)
-title.Text = "SBS HUB | TSB"
+title.Text = "SBS HUB | Survive Overnight in a Mega Store"
 title.TextColor3 = Color3.fromRGB(255,255,255)
 title.Font = Enum.Font.GothamBold
 title.TextScaled = true
@@ -535,10 +538,6 @@ local menuData = {
     ["BRING/PICK UP"] = {
         "NAME OF THE ITEM",
         "BRING ITEM",
-        "RANGE",        
-        "HITBOX EXTENDER",
-        "SIZE",
-        "TRASPARENCY 0-1",
     },
     ["ESP"] = {
         "ESP TO ALL ALARMS",
