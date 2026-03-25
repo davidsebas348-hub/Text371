@@ -68,7 +68,7 @@ local BUTTON_CUSTOM = {
     },
 
     ["TRASPARENCY 0-1"] = {
-        size = UDim2.new(1, -30, 0, 27),
+        size = UDim2.new(1, -50, 0, 27),
         x = 20,
         y = -9 
     }
@@ -461,18 +461,30 @@ if hasTextbox then
         button.Text = text
         button.BackgroundColor3 = Color3.fromRGB(20,20,20)
 
-        button.MouseButton1Click:Connect(function()
-            if not noGreenFlash[text] then
-                local oldColor = button.BackgroundColor3
-                button.BackgroundColor3 = Color3.fromRGB(0,120,0)
-                task.delay(1,function()
-                    if button then
-                        button.BackgroundColor3 = oldColor
-                    end
-                end)
+        local clicking = false
+
+button.MouseButton1Click:Connect(function()
+    if clicking then return end -- 🔥 evita spam
+    clicking = true
+
+    if not noGreenFlash[text] then
+        local oldColor = button.BackgroundColor3
+        button.BackgroundColor3 = Color3.fromRGB(0,120,0)
+
+        task.delay(0.5,function() -- más rápido
+            if button then
+                button.BackgroundColor3 = oldColor
             end
-            callback()
+            clicking = false
         end)
+    else
+        clicking = false
+    end
+
+    if callback then
+        callback()
+    end
+end)
     end
 end
     
