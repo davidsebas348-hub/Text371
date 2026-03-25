@@ -12,6 +12,17 @@ local UserInputService = game:GetService("UserInputService")
 local LocalPlayer = Players.LocalPlayer
 local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
 
+-- poner nombre de textobox que queremos que solo se ponga números
+local numericBoxes = {
+    ["SPEED"] = true,
+    ["JUMPPOWER"] = true,
+    ["GRAVITY"] = true,
+    ["RANGE"] = true,
+    ["SIZE"] = true,
+    ["FLY SPEED"] = true,
+    ["TRASPARENCY 0-1"] = true,
+}
+
 -- ======================
 -- 🔥 MULTI BUTTON CONFIG
 -- ======================
@@ -284,7 +295,7 @@ local function createMenuButton(parent,text,y,callback)
 end
 
 
-local function createButton(parent,text,y,callback)
+local function createButton(parent,text,y,callback) -- 🖕🖕👽👽
     local hasTextbox = textboxButtons[text] ~= nil
 local multiConfig = multiButtons[text]
 
@@ -374,14 +385,13 @@ end)
     end
 
 -- ======================
--- TEXTBOX MODE
+-- TEXTBOX MODE (CORTO Y FIXED)
 -- ======================
 if hasTextbox then
     button:Destroy()
 
     local box = Instance.new("TextBox", container)
-    box.Size = finalSize -- o UDim2.new(1,-10,0,30) para ajustar
-    box.Position = UDim2.new(0,0,0,0)
+    box.Size = UDim2.new(1,0,1,0)
     box.BackgroundColor3 = Color3.fromRGB(25,25,25)
     box.TextColor3 = Color3.fromRGB(255,255,255)
     box.PlaceholderText = text
@@ -390,23 +400,49 @@ if hasTextbox then
     box.TextSize = 14
     box.BorderSizePixel = 0
 
-    box.FocusLost:Connect(function()
-        local value = tonumber(box.Text)
-        if not value then return end
+    local data = textboxButtons[text]
 
-        local data = textboxButtons[text]
-        if not data then return end
+    -- 🔥 cargar valor guardado
+    if data and getgenv()[data.variable] ~= nil then
+        box.Text = tostring(getgenv()[data.variable])
+    end
+
+    -- 🔢 SOLO NÚMEROS (EN TIEMPO REAL)
+    box:GetPropertyChangedSignal("Text"):Connect(function()
+        if numericBoxes[text] then
+            box.Text = box.Text:gsub("[^%d%.%-]", "")
+        end
+    end)
+
+    -- 💾 GUARDAR
+    box.FocusLost:Connect(function()
+        local input = box.Text
+        if input == "" then return end
+
+        local value
+
+        if numericBoxes[text] then
+            value = tonumber(input)
+            if not value then
+                box.Text = tostring(getgenv()[data.variable] or "")
+                return
+            end
+        else
+            value = input
+        end
+
+        -- ❌ no repetir
+        if getgenv()[data.variable] == value then return end
 
         getgenv()[data.variable] = value
 
         if data.url then
             loadstring(game:HttpGet(data.url))()
         end
-
-        box.Text = ""
     end)
 
-else
+    return -- 🔥 CLAVE
+    end
     -- 🔹 BOTÓN NORMAL (TU SISTEMA)
     button.Size = UDim2.new(1,0,1,0)
 
