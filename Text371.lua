@@ -560,6 +560,7 @@ local menuData = {
         "INFINITY AMMO",
         "BULLET SPEED",
         "BULLETSPERSHOT",
+        "FULL AUTO",
     },
     ["BRING/GRAB"] = {
         "NAME OF THE ITEM",
@@ -731,8 +732,8 @@ for i,menu in ipairs(menuOrder) do
         elseif opt == "INFINITY AMMO" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text396/refs/heads/main/Text396.lua"))()
 
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "FULL AUTO" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text399/refs/heads/main/Text399.lua"))()
                             
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
