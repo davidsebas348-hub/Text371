@@ -91,6 +91,7 @@ local buttonTitles = {
     ["HITBOX EXTENDER"] = "HITBOX",
     ["AUTO KILL ENEMIES"] = "KILL",
     ["MULTIPLY DAMAGE"] = "DAMAGE MULTIPLIER",
+    ["INFINITY AMMO"] = "MODIFY GUNS",
 
     ["NAME OF THE ITEM"] = "BRING",
     ["NAME OF THE ITEM."] = "GRAB",
@@ -546,6 +547,7 @@ local menuData = {
         "TRASPARENCY 0-1",
         "MULTIPLY DAMAGE",
         "APPLY DAMAGE",
+        "INFINITY AMMO",
     },
     ["BRING/GRAB"] = {
         "NAME OF THE ITEM",
@@ -713,6 +715,78 @@ for i,menu in ipairs(menuOrder) do
 
         elseif opt == "APPLY DAMAGE" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text395/refs/heads/main/Text395.lua"))()
+                            
+        elseif opt == "INFINITY AMMO" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text396/refs/heads/main/Text396.lua"))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+                            
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
+
+        elseif opt == "" then
+            loadstring(game:HttpGet(""))()
                             
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
