@@ -78,6 +78,7 @@ local BUTTON_CUSTOM = {
 -- TITULOS ARRIBA DE BOTONES
 local buttonTitles = {
     ["SPEED"] = "PLAYER",
+    ["AUTO DESTROY TO ALL OBJECTS"] = "TROLL",
     ["INFINITY ZOOM"] = "CAMERA",
 
     ["ELIGIR PACK"] = "ANIMATION PACK",
@@ -86,7 +87,7 @@ local buttonTitles = {
     ["ESP TO ALL ALARMS"] = "END",
     ["ESP TO ALL THE TOKEN"] = "ITEMS",
     ["ESP ENEMIES"] = "ENEMIES",
-    ["ESP PLAYERS"] = "PLAYERS",
+    ["ESP PLAYERS + NAME + DISTANCE"] = "PLAYERS",
 
     ["HITBOX EXTENDER"] = "HITBOX",
     ["AUTO KILL ENEMIES"] = "KILL",
@@ -539,6 +540,8 @@ local menuData = {
     "INFINITY STAMINA",
     "INFINITY ZOOM",
     "UNLOCK THIRD PERSON",
+    "AUTO DESTROY TO ALL OBJECTS",
+    "NO VISIBLE ITEMS (GRAB)",
     "SPEED",
     "JUMPPOWER",
     "GRAVITY",
@@ -743,8 +746,8 @@ for i,menu in ipairs(menuOrder) do
         elseif opt == "NO FIRE DELAY" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text401/refs/heads/main/Text401.lua"))()
                             
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "NO VISIBLE ITEMS (GRAB)" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text402/refs/heads/main/Text402.lua"))()
                             
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
