@@ -91,7 +91,7 @@ local buttonTitles = {
     ["AUTO KILL ENEMIES"] = "KILL",
 
     ["NAME OF THE ITEM"] = "BRING",
-    [""] = "",
+    ["NAME OF THE ITEM."] = "GRAB",
     
     ["Fps Boost"] = "PERFORMANCE"
 }
@@ -110,7 +110,7 @@ local noToggleButtons = {
     ["FULL BRIGHT"] = true,
     ["INFINITY STAMINA"] = true,
     ["BRING ITEM"] = true,
-    ["AUTO COLLECT CASH (FARM)"] = true,
+    ["GRAB THE ITEM"] = true,
     ["AUTO TP A TASK (BUTTON)"] = true,
     ["REMOVE INVISIBLE WALLS"] = true,
 }
@@ -150,6 +150,10 @@ local textboxButtons = {
     },
     ["NAME OF THE ITEM"] = {
     variable = "FIND_TOOL",
+    url = nil
+    },
+    ["NAME OF THE ITEM."] = {
+    variable = "GRAB_ITEM",
     url = nil
     },
     ["RANGE"] = {
@@ -499,7 +503,7 @@ local scrollConfig = {
     ["COMBAT"] = true,
     ["ESP"] = true,
     ["TELEPORT"] = true,
-    ["BRING/PICK UP"] = true,
+    ["BRING/GRAB"] = true,
     ["DODGE"] = true,
     ["AUTO FARM"] = true,
     ["FLING"] = true,
@@ -509,7 +513,7 @@ local scrollConfig = {
 -- ======================
 -- MENUS
 -- ======================
-local menuOrder = {"MAIN","COMBAT","ESP","TELEPORT","BRING/PICK UP","ANTI","DODGE","AUTO FARM","FLING","Fps","YOUTUBE"}
+local menuOrder = {"MAIN","COMBAT","ESP","TELEPORT","BRING/GRAB","ANTI","DODGE","AUTO FARM","FLING","Fps","YOUTUBE"}
 local menuData = {
     ["MAIN"] = {
     "LOCALPLAYER",
@@ -535,9 +539,11 @@ local menuData = {
         "SIZE",
         "TRASPARENCY 0-1",
     },
-    ["BRING/PICK UP"] = {
+    ["BRING/GRAB"] = {
         "NAME OF THE ITEM",
         "BRING ITEM",
+        "NAME OF THE ITEM.",
+        "GRAB THE ITEM",
     },
     ["ESP"] = {
         "ESP TO ALL ALARMS",
@@ -694,8 +700,8 @@ for i,menu in ipairs(menuOrder) do
         elseif opt == "BRING ITEM" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text393/refs/heads/main/Text393.lua"))()
                             
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "GRAB ITEM" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text394/refs/heads/main/Text394.lua"))()
 
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
