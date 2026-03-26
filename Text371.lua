@@ -561,6 +561,7 @@ local menuData = {
         "BULLET SPEED",
         "BULLETSPERSHOT",
         "FULL AUTO",
+        "INSTANT RELOAD",
     },
     ["BRING/GRAB"] = {
         "NAME OF THE ITEM",
@@ -735,8 +736,8 @@ for i,menu in ipairs(menuOrder) do
         elseif opt == "FULL AUTO" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text399/refs/heads/main/Text399.lua"))()
                             
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "INSTANT RELOAD" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text400/refs/heads/main/Text400.lua"))()
 
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
