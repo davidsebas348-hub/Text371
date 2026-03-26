@@ -114,7 +114,7 @@ local noToggleButtons = {
     ["INFINITY STAMINA"] = true,
     ["BRING ITEM"] = true,
     ["GRAB THE ITEM"] = true,
-    ["AUTO TP A TASK (BUTTON)"] = true,
+    ["NO FIRE DELAY"] = true,
     ["REMOVE INVISIBLE WALLS"] = true,
 }
 
@@ -562,6 +562,7 @@ local menuData = {
         "BULLETSPERSHOT",
         "FULL AUTO",
         "INSTANT RELOAD",
+        "NO FIRE DELAY", 
     },
     ["BRING/GRAB"] = {
         "NAME OF THE ITEM",
@@ -739,8 +740,8 @@ for i,menu in ipairs(menuOrder) do
         elseif opt == "INSTANT RELOAD" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text400/refs/heads/main/Text400.lua"))()
 
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "NO FIRE DELAY" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text401/refs/heads/main/Text401.lua"))()
                             
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
