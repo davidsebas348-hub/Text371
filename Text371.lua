@@ -134,6 +134,11 @@ local textboxButtons = {
         url = "https://raw.githubusercontent.com/davidsebas348-hub/Text397/refs/heads/main/Text397.lua"
     },
 
+    ["BULLETSPERSHOT"] = {
+        variable = "BULLETS_PER_SHOT",
+        url = "https://raw.githubusercontent.com/davidsebas348-hub/Text398/refs/heads/main/Text398.lua"
+    },
+
     ["JUMPPOWER"] = {
         variable = "JUMP",
         url = "https://raw.githubusercontent.com/davidsebas348-hub/JumpPower/refs/heads/main/JumpPower.lua"
@@ -554,6 +559,7 @@ local menuData = {
         "APPLY DAMAGE",
         "INFINITY AMMO",
         "BULLET SPEED",
+        "BULLETSPERSHOT",
     },
     ["BRING/GRAB"] = {
         "NAME OF THE ITEM",
