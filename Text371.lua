@@ -749,8 +749,8 @@ for i,menu in ipairs(menuOrder) do
         elseif opt == "NO VISIBLE ITEMS (GRAB)" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text402/refs/heads/main/Text402.lua"))()
                             
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "AUTO DESTROY TO ALL OBJECTS" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text403/refs/heads/main/Text403.lua"))()
 
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
