@@ -21,6 +21,7 @@ local numericBoxes = {
     ["SIZE"] = true,
     ["FLY SPEED"] = true,
     ["TRASPARENCY 0-1"] = true,
+    ["MULTIPLY DAMAGE"] = true,
 }
 
 -- ======================
@@ -89,6 +90,7 @@ local buttonTitles = {
 
     ["HITBOX EXTENDER"] = "HITBOX",
     ["AUTO KILL ENEMIES"] = "KILL",
+    ["MULTIPLY DAMAGE"] = "DAMAGE MULTIPLIER",
 
     ["NAME OF THE ITEM"] = "BRING",
     ["NAME OF THE ITEM."] = "GRAB",
@@ -154,6 +156,10 @@ local textboxButtons = {
     },
     ["NAME OF THE ITEM."] = {
     variable = "GRAB_ITEM",
+    url = nil
+    },
+    ["MULTIPLY DAMAGE"] = {
+    variable = "MULTIPLIER",
     url = nil
     },
     ["RANGE"] = {
@@ -538,6 +544,8 @@ local menuData = {
         "HITBOX EXTENDER",
         "SIZE",
         "TRASPARENCY 0-1",
+        "MULTIPLY DAMAGE",
+        "APPLY DAMAGE",
     },
     ["BRING/GRAB"] = {
         "NAME OF THE ITEM",
@@ -703,8 +711,8 @@ for i,menu in ipairs(menuOrder) do
         elseif opt == "GRAB THE ITEM" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text394/refs/heads/main/Text394.lua"))()
 
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "APPLY DAMAGE" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text395/refs/heads/main/Text395.lua"))()
                             
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
