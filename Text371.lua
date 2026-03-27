@@ -116,7 +116,7 @@ local noToggleButtons = {
     ["BRING ITEM"] = true,
     ["GRAB THE ITEM"] = true,
     ["NO FIRE DELAY"] = true,
-    ["REMOVE INVISIBLE WALLS"] = true,
+    ["BRING ALL THE ITEMS"] = true,
 }
 
 -- BOTONES SIN EFECTO VERDE
@@ -570,8 +570,10 @@ local menuData = {
     ["BRING/GRAB"] = {
         "NAME OF THE ITEM",
         "BRING ITEM",
+        "BRING ALL THE ITEMS",
         "NAME OF THE ITEM.",
         "GRAB THE ITEM",
+        "GRAB THE ITEM (BUTTON)",
     },
     ["ESP"] = {
         "ESP TO ALL ALARMS",
@@ -752,8 +754,8 @@ for i,menu in ipairs(menuOrder) do
         elseif opt == "AUTO DESTROY TO ALL OBJECTS" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text403/refs/heads/main/Text403.lua"))()
 
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "BRING ALL THE ITEMS" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text404/refs/heads/main/Text404.lua"))()
                             
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
