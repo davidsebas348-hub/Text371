@@ -606,6 +606,12 @@ local menuData = {
     },
     ["TELEPORT"] = {
         "TP TOOL",
+        "ABOVE THE MARKET", 
+        "OUTSIDE THE MARKET",
+        "WITHIN THE MARKET",
+        "ELECTRICAL ROOM",
+        "MANAGER'S OFFICE",
+        
     },
     ["Fps"] = {
         "Fps Boost"
@@ -766,8 +772,9 @@ for i,menu in ipairs(menuOrder) do
         elseif opt == "INSTANT SWING" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text406/refs/heads/main/Text406.lua"))()
 
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "ELECTRICAL ROOM" then
+            getgenv().TP_PLACE = "electricidad"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text407/refs/heads/main/Text407.lua"))()
                             
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
