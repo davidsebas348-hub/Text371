@@ -92,7 +92,8 @@ local buttonTitles = {
     ["HITBOX EXTENDER"] = "HITBOX",
     ["AUTO KILL ENEMIES"] = "KILL",
     ["MULTIPLY DAMAGE"] = "DAMAGE MULTIPLIER",
-    ["INFINITY AMMO"] = "MODIFY GUNS",
+    ["INFINITY AMMO"] = "MODIFY GUNS"
+    ["INSTANT SWING"] = "MESH WEAPON MODIFICATIONS",
 
     ["NAME OF THE ITEM"] = "BRING",
     ["NAME OF THE ITEM."] = "GRAB",
@@ -117,6 +118,7 @@ local noToggleButtons = {
     ["GRAB THE ITEM"] = true,
     ["NO FIRE DELAY"] = true,
     ["BRING ALL THE ITEMS"] = true,
+    ["INSTANT SWING"] = true,  
 }
 
 -- BOTONES SIN EFECTO VERDE
@@ -566,6 +568,7 @@ local menuData = {
         "FULL AUTO",
         "INSTANT RELOAD",
         "NO FIRE DELAY", 
+        "INSTANT SWING",
     },
     ["BRING/GRAB"] = {
         "NAME OF THE ITEM",
@@ -760,8 +763,8 @@ for i,menu in ipairs(menuOrder) do
         elseif opt == "GRAB THE ITEM (BUTTON)" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text405/refs/heads/main/Text405.lua"))()
                             
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "INSTANT SWING" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text406/refs/heads/main/Text406.lua"))()
 
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
