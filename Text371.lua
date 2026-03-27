@@ -557,6 +557,7 @@ local menuData = {
     "INFINITY STAMINA",
     "INFINITY ZOOM",
     "UNLOCK THIRD PERSON",
+    "FULL BRIGHT",
     "AUTO DESTROY TO ALL OBJECTS",
     "NO VISIBLE ITEMS (GRAB)",
     "SPEED",
@@ -812,8 +813,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Tex
         elseif opt == "TP TO PLAYER" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text408/refs/heads/main/Text408.lua"))()
 
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "FULL BRIGHT" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text409/refs/heads/main/Text409.lua"))()
                             
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
