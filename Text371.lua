@@ -788,8 +788,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Tex
             getgenv().TP_PLACE = "dentro"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text407/refs/heads/main/Text407.lua"))()
 
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "MANAGER'S OFFICE" then
+            getgenv().TP_PLACE = "dentro de la sala de el gerente"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text407/refs/heads/main/Text407.lua"))()
                             
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
