@@ -606,9 +606,9 @@ local menuData = {
     },
     ["TELEPORT"] = {
         "TP TOOL",
-        "ABOVE THE MARKET", 
-        "OUTSIDE THE MARKET",
-        "WITHIN THE MARKET",
+        "ABOVE THE MARKET",  
+        "OUTSIDE THE MARKET", 
+        "WITHIN THE MARKET", 
         "ELECTRICAL ROOM",
         "MANAGER'S OFFICE",
         
@@ -776,14 +776,17 @@ for i,menu in ipairs(menuOrder) do
             getgenv().TP_PLACE = "electricidad"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text407/refs/heads/main/Text407.lua"))()
                             
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
-
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "OUTSIDE THE MARKET" then
+            getgenv().TP_PLACE = "afuera"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text407/refs/heads/main/Text407.lua"))()
                             
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "ABOVE THE MARKET" then 
+            getgenv().TP_PLACE = "arriba"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text407/refs/heads/main/Text407.lua"))()
+                            
+        elseif opt == "WITHIN THE MARKET" then
+            getgenv().TP_PLACE = "dentro"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text407/refs/heads/main/Text407.lua"))()
 
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
