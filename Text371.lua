@@ -757,8 +757,8 @@ for i,menu in ipairs(menuOrder) do
         elseif opt == "BRING ALL THE ITEMS" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text404/refs/heads/main/Text404.lua"))()
                             
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "GRAB THE ITEM (BUTTON)" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text405/refs/heads/main/Text405.lua"))()
                             
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
