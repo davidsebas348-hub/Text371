@@ -556,6 +556,7 @@ local menuData = {
     "INVISIBLE",
     "INFINITY STAMINA",
     "INFINITY ZOOM",
+    "CAMERA NOCLIP",
     "UNLOCK THIRD PERSON",
     "FULL BRIGHT",
     "AUTO DESTROY TO ALL OBJECTS",
@@ -816,8 +817,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Tex
         elseif opt == "FULL BRIGHT" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text409/refs/heads/main/Text409.lua"))()
                             
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "CAMERA NOCLIP" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text410/refs/heads/main/Text410.lua"))()
                             
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
