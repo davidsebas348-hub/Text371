@@ -81,6 +81,11 @@ local buttonTitles = {
     ["AUTO DESTROY TO ALL OBJECTS"] = "TROLL",
     ["INFINITY ZOOM"] = "CAMERA",
 
+    ["TP TOOL"] = "CLICK TP",
+    ["ABOVE THE MARKET"] = "MAP",
+    ["PLAYER NAME"] = "PLAYERS",
+    
+
     ["ELIGIR PACK"] = "ANIMATION PACK",
     ["GAZE EMOTE"] = "EMOTES",
     
@@ -119,6 +124,12 @@ local noToggleButtons = {
     ["NO FIRE DELAY"] = true,
     ["BRING ALL THE ITEMS"] = true,
     ["INSTANT SWING"] = true,  
+    ["ABOVE THE MARKET"] = true,
+    ["MANAGER'S OFFICE"] = true,
+    ["ELECTRICAL ROOM"] = true,
+    ["OUTSIDE THE MARKET"] = true,
+    ["WITHIN THE MARKET"] = true,
+    ["TP TO PLAYER"] = true,  
 }
 
 -- BOTONES SIN EFECTO VERDE
@@ -158,6 +169,10 @@ local textboxButtons = {
     },
     ["SIZE"] = {
     variable = "HITBOX_SIZE",
+    url = nil
+    },
+    ["PLAYER NAME"] = {
+    variable = "PLAYER",
     url = nil
     },
     ["TRASPARENCY 0-1"] = {
@@ -611,6 +626,8 @@ local menuData = {
         "WITHIN THE MARKET", 
         "ELECTRICAL ROOM",
         "MANAGER'S OFFICE",
+        "PLAYER NAME",
+        "TP TO PLAYER",
         
     },
     ["Fps"] = {
@@ -792,8 +809,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Tex
             getgenv().TP_PLACE = "dentro de la sala de el gerente"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text407/refs/heads/main/Text407.lua"))()
                             
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "TP TO PLAYER" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text408/refs/heads/main/Text408.lua"))()
 
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
