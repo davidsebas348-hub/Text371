@@ -68,6 +68,12 @@ local BUTTON_CUSTOM = {
         y = -6
     },
 
+    ["AUTOMATICALLY EQUIP THE TOOL"] = {
+        size = UDim2.new(1, -50, 0, 27),
+        x = 20,
+        y = -6
+    },
+
     ["TRASPARENCY 0-1"] = {
         size = UDim2.new(1, -50, 0, 27),
         x = 20,
@@ -93,6 +99,11 @@ local buttonTitles = {
     ["ESP TO ALL THE TOKEN"] = "ITEMS",
     ["ESP ENEMIES"] = "ENEMIES",
     ["ESP PLAYERS + NAME + DISTANCE"] = "PLAYERS",
+
+    ["AUTO EAT"] = "EAT",
+    [""] = "ITEMS",
+    [""] = "ENEMIES",
+    [""] = "PLAYERS",
 
     ["HITBOX EXTENDER"] = "HITBOX",
     ["AUTO KILL ENEMIES"] = "KILL",
@@ -539,7 +550,7 @@ local scrollConfig = {
     ["ESP"] = true,
     ["TELEPORT"] = true,
     ["BRING/GRAB"] = true,
-    ["DODGE"] = true,
+    ["AUTO/ANTI"] = true,
     ["AUTO FARM"] = true,
     ["FLING"] = true,
     ["Fps"] = false,
@@ -548,7 +559,7 @@ local scrollConfig = {
 -- ======================
 -- MENUS
 -- ======================
-local menuOrder = {"MAIN","COMBAT","ESP","TELEPORT","BRING/GRAB","ANTI","DODGE","AUTO FARM","FLING","Fps","YOUTUBE"}
+local menuOrder = {"MAIN","COMBAT","ESP","TELEPORT","BRING/GRAB","AUTO/ANTI","DODGE","AUTO FARM","FLING","Fps","YOUTUBE"}
 local menuData = {
     ["MAIN"] = {
     "LOCALPLAYER",
@@ -629,8 +640,17 @@ local menuData = {
         "ELECTRICAL ROOM",
         "MANAGER'S OFFICE",
         "PLAYER NAME",
+        "TP TO PLAYER",        
+    },
+    ["AUTO/ANTI"] = {
+        "AUTO EAT",
+        "AUTOMATICALLY EQUIP THE TOOL",  
+        "OUTSIDE THE MARKET", 
+        "WITHIN THE MARKET", 
+        "ELECTRICAL ROOM",
+        "MANAGER'S OFFICE",
+        "PLAYER NAME",
         "TP TO PLAYER",
-        
     },
     ["Fps"] = {
         "Fps Boost"
@@ -820,11 +840,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Tex
         elseif opt == "CAMERA NOCLIP" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text410/refs/heads/main/Text410.lua"))()
                             
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "AUTO EAT" then 
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text411/refs/heads/main/Text411.lua"))()
 
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "AUTOMATICALLY EQUIP THE TOOL" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text412/refs/heads/main/Text412.lua"))()
                             
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
