@@ -367,8 +367,9 @@ midLine.BackgroundColor3 = Color3.fromRGB(255,255,255)
 -- ======================
 
 local dragLine = Instance.new("Frame", mainFrame)
-dragLine.Size = UDim2.new(1, -50, 0, 8) -- ancho completo, altura pequeña
-dragLine.Position = UDim2.new(0, 25, 1, 10) -- el último número es para subir y bajar - es subir y sin - es bajar 
+dragLine.Size = UDim2.new(1, -60, 0, 8) -- ancho completo, altura pequeña
+dragLine.Position = UDim2.new(0, 30, 1, 10) -- el último número es para subir y bajar - es subir y sin - es bajar 
+dragLine.BackgroundColor3 = Color3.fromRGB(255,255,255)
 dragLine.BackgroundTransparency = 0.1 -- invisible
 dragLine.BorderSizePixel = 0
 dragLine.ZIndex = 20 -- encima de todo
