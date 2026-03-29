@@ -367,9 +367,9 @@ midLine.BackgroundColor3 = Color3.fromRGB(255,255,255)
 -- ======================
 
 local dragLine = Instance.new("Frame", mainFrame)
-dragLine.Size = UDim2.new(1, -35, 0, 8) -- ancho completo, altura pequeña
-dragLine.Position = UDim2.new(0, 0, 1, 10) -- el último número es para subir y bajar - es subir y sin - es bajar 
-dragLine.BackgroundTransparency = 0.5 -- invisible
+dragLine.Size = UDim2.new(1, -50, 0, 8) -- ancho completo, altura pequeña
+dragLine.Position = UDim2.new(0, 25, 1, 10) -- el último número es para subir y bajar - es subir y sin - es bajar 
+dragLine.BackgroundTransparency = 0.1 -- invisible
 dragLine.BorderSizePixel = 0
 dragLine.ZIndex = 20 -- encima de todo
 local corner = Instance.new("UICorner", dragLine)
