@@ -24,6 +24,12 @@ local numericBoxes = {
     ["MULTIPLY DAMAGE"] = true,
 }
 
+-- poner título arriba de tal botón 
+local topTitles = {
+    ["SPEED"] = "MOVEMENT SETTINGS",
+    ["AUTO KILL ENEMIES"] = "KILL SYSTEM",
+}
+
 -- poner títulos abajo de tal botón
 local customTitles = {
     ["SPEED"] = "MOVEMENT SETTINGS",
@@ -734,6 +740,22 @@ for i,menu in ipairs(menuOrder) do
 
         oy += 30
     end
+
+    local topTitle = topTitles[opt]
+
+if topTitle then
+    local section = Instance.new("TextLabel", rightFrame)
+    section.Size = UDim2.new(1,0,0,30)
+    section.Position = UDim2.new(0,0,0,oy)
+    section.BackgroundTransparency = 1
+    section.Text = topTitle
+    section.TextColor3 = Color3.fromRGB(255,255,255)
+    section.Font = Enum.Font.GothamBold
+    section.TextSize = 18
+    section.TextXAlignment = Enum.TextXAlignment.Center
+
+    oy += 35 -- 🔥 baja el botón
+                end
 
     createButton(rightFrame,opt,oy,function(state)
 
