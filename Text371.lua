@@ -24,6 +24,21 @@ local numericBoxes = {
     ["MULTIPLY DAMAGE"] = true,
 }
 
+- poner títulos abajo de tal botón
+local customTitles = {
+    ["SPEED"] = "MOVEMENT SETTINGS",
+    ["AUTO KILL ENEMIES"] = "KILL SYSTEM",
+    ["ESP NAME"] = "ESP VISUAL",
+}
+
+-- cambiar el nombre de los Titulos de las secciones 
+local menuNames = {
+    ["MAIN"] = "PLAYER MENU",
+    ["COMBAT"] = "FIGHT SYSTEM",
+    ["ESP"] = "VISUALS",
+    ["TELEPORT"] = "TELEPORTS",
+}
+
 -- ======================
 -- 🔥 MULTI BUTTON CONFIG
 -- ======================
@@ -696,7 +711,7 @@ for i,menu in ipairs(menuOrder) do
         local titleLabel = Instance.new("TextLabel", rightFrame)
         titleLabel.Size = UDim2.new(1,0,0,30)
         titleLabel.BackgroundTransparency = 1
-        titleLabel.Text = menu
+        titleLabel.Text = menuNames[menu] or menu
         titleLabel.TextColor3 = Color3.fromRGB(255,255,255)
         titleLabel.Font = Enum.Font.GothamBold
         titleLabel.TextSize = 18
@@ -981,7 +996,23 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Tex
     end)
 
     oy += 40
-end
+
+local customTitle = customTitles[opt]
+
+if customTitle then
+    local section = Instance.new("TextLabel", rightFrame)
+    section.Size = UDim2.new(1,-20,0,30)
+    section.Position = UDim2.new(0,10,0,oy)
+    section.BackgroundTransparency = 1
+    section.Text = customTitle
+    section.TextColor3 = Color3.fromRGB(255,255,255)
+    section.Font = Enum.Font.GothamBold
+    section.TextSize = 18
+    section.TextXAlignment = Enum.TextXAlignment.Center
+    
+    oy += 35
+                end
+            end
 
 end)
 end
