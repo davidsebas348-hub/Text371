@@ -73,6 +73,12 @@ local BUTTON_CUSTOM = {
         x = 20,
         y = -6
     },
+    
+    ["AUTOMATICALLY EQUIP THE TOOL "] = {
+        size = UDim2.new(1, -50, 0, 27),
+        x = 20,
+        y = -6
+    },
 
     ["TRASPARENCY 0-1"] = {
         size = UDim2.new(1, -50, 0, 27),
@@ -101,7 +107,7 @@ local buttonTitles = {
     ["ESP PLAYERS + NAME + DISTANCE"] = "PLAYERS",
 
     ["AUTO EAT"] = "EAT",
-    [""] = "ITEMS",
+    ["SELF-HEALING"] = "HEALTH",
     [""] = "ENEMIES",
     [""] = "PLAYERS",
 
@@ -128,7 +134,7 @@ local noToggleButtons = {
     ["RESET STATS"] = true,
     ["DESYNC"] = true,
     ["Fps Boost"] = true,
-    ["FULL BRIGHT"] = true,
+    [""] = true,
     ["INFINITY STAMINA"] = true,
     ["BRING ITEM"] = true,
     ["GRAB THE ITEM"] = true,
@@ -645,7 +651,8 @@ local menuData = {
     ["AUTO/ANTI"] = {
         "AUTO EAT",
         "AUTOMATICALLY EQUIP THE TOOL",  
-        "OUTSIDE THE MARKET", 
+        "SELF-HEALING", 
+        "AUTOMATICALLY EQUIP THE TOOL ",
         "WITHIN THE MARKET", 
         "ELECTRICAL ROOM",
         "MANAGER'S OFFICE",
@@ -846,11 +853,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Tex
         elseif opt == "AUTOMATICALLY EQUIP THE TOOL" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text412/refs/heads/main/Text412.lua"))()
                             
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "SELF-HEALING" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text413/refs/heads/main/Text413.lua"))()
                             
-        elseif opt == "" then
-            loadstring(game:HttpGet(""))()
+        elseif opt == "AUTOMATICALLY EQUIP THE TOOL " then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/davidsebas348-hub/Text414/refs/heads/main/Text414.lua"))()
 
         elseif opt == "" then
             loadstring(game:HttpGet(""))()
