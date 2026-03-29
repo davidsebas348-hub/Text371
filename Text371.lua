@@ -24,7 +24,7 @@ local numericBoxes = {
     ["MULTIPLY DAMAGE"] = true,
 }
 
-- poner títulos abajo de tal botón
+-- poner títulos abajo de tal botón
 local customTitles = {
     ["SPEED"] = "MOVEMENT SETTINGS",
     ["AUTO KILL ENEMIES"] = "KILL SYSTEM",
