@@ -108,7 +108,7 @@ local BUTTON_CUSTOM = {
     }
 }
 
--- TITULOS ARRIBA DE BOTONES
+-- TITULOS ARRIBA DE BOTONES (titulos simples)
 local buttonTitles = {
     ["SPEED"] = "PLAYER",
     ["AUTO DESTROY TO ALL OBJECTS"] = "TROLL",
@@ -245,6 +245,7 @@ mainFrame.Size = UDim2.new(0,500,0,350)
 mainFrame.Position = UDim2.new(0.5,-250,0.5,-175)
 mainFrame.BackgroundColor3 = Color3.fromRGB(0,0,0)
 mainFrame.BorderSizePixel = 0
+mainFrame.ClipsDescendants = false
 
 -- ======================
 -- RESIZE CORNER
@@ -359,6 +360,53 @@ local midLine = Instance.new("Frame", mainFrame)
 midLine.Size = UDim2.new(0,2,1,-52)
 midLine.Position = UDim2.new(0,150,0,52)
 midLine.BackgroundColor3 = Color3.fromRGB(255,255,255)
+
+
+-- ======================
+-- 🔥 EMERGENCY DRAG LINE
+-- ======================
+
+local dragLine = Instance.new("Frame", mainFrame)
+dragLine.Size = UDim2.new(1, -35, 0, 8) -- ancho completo, altura pequeña
+dragLine.Position = UDim2.new(0, 0, 1, 10) -- el último número es para subir y bajar - es subir y sin - es bajar 
+dragLine.BackgroundTransparency = 0.5 -- invisible
+dragLine.BorderSizePixel = 0
+dragLine.ZIndex = 20 -- encima de todo
+local corner = Instance.new("UICorner", dragLine)
+corner.CornerRadius = UDim.new(0, 6) -- puedes cambiar el 6
+
+-- DRAG LOGIC
+do
+    local dragging, dragStart, startPos
+
+    local function update(input)
+        local delta = input.Position - dragStart
+        mainFrame.Position = UDim2.new(
+            startPos.X.Scale, startPos.X.Offset + delta.X,
+            startPos.Y.Scale, startPos.Y.Offset + delta.Y
+        )
+    end
+
+    dragLine.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+            dragging = true
+            dragStart = input.Position
+            startPos = mainFrame.Position
+
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                end
+            end)
+        end
+    end)
+
+    game:GetService("UserInputService").InputChanged:Connect(function(input)
+        if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+            update(input)
+        end
+    end)
+end -- aca termina eso 🖕🖕🖕
 
 local function createMenuButton(parent,text,y,callback)
     local b = Instance.new("TextButton", parent)
